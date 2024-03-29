@@ -87,6 +87,7 @@
 #define PIN_DATAOUT2        9 
 #define PIN_DATAOUT3        8 
 #define PIN_DATAOUT4        7 
+
 #define PIN_DATAOUT5        6 
 #define PIN_DATAOUT6        5 
 #define PIN_DATAOUT7        4 
@@ -1865,7 +1866,14 @@ void opcode_0xAB() {  Fetch_Immediate();    Begin_Fetch_Next_Opcode(); return;  
 // Main loop
 //
 // -------------------------------------------------
+//CG Add declare clock speed routine
+extern "C" uint32_t set_arm_clock(uint32_t frequency); // required prototype
+//CG Add
+
  void loop() {
+  //CG Add - if lower than expected speed, change it	 
+  if ( F_CPU_ACTUAL < 816000000 ) set_arm_clock(816000000);
+  //CG Add
   
   //setup();
   
