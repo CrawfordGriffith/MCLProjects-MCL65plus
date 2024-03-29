@@ -1,3 +1,4 @@
+#pragma GCC optimize ("O3")
 //
 //
 //  File Name   :  MCL65+.c
