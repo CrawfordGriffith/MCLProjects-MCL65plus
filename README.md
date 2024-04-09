@@ -10,4 +10,4 @@ Second, I am moving the compile parameters (Optimization level, CPU speed) into 
 
 Next, I'm making the generic code more general by conditional compilation of systm specific deails
 
-Then I will be adding some of my on ideas
+Then I will be adding some of my own ideas
