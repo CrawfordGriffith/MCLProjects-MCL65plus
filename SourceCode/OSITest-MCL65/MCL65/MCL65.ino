@@ -1935,7 +1935,7 @@ void opcode_0xAB() {  Fetch_Immediate();    Begin_Fetch_Next_Opcode(); return;  
 // -------------------------------------------------
 //CG Add declare clock speed routine
 extern "C" uint32_t set_arm_clock(uint32_t frequency); // required prototype
-uinit16_t i; // Address counter
+uint16_t i; // Address counter
 //CG Add
 
  void loop() {
@@ -1954,7 +1954,7 @@ uinit16_t i; // Address counter
 
   reset_sequence();
   //CG Add
-  for (i=0x0300,i<0x15EB,i++) {
+  for (i=0x0300;i<0x15EB;i++) {
     internal_RAM[i] = Disk_Test[i-0x300];
   };
   //End CG Add
